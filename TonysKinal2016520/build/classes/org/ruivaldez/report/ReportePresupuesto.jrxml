@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="55f283c0-adf5-4bb0-9cf0-671d832aa9ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte($P{codEmpresa})]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="-2" y="3" width="754" height="76" uuid="66a6cb4f-5317-44ab-95f3-4f9dd3fe7c45"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\FondoAbstracto.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="225" y="0" width="67" height="46" uuid="89f012f6-eb64-4fe4-8d77-8f375fc2792b"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\IconoTiendaReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="282" y="15" width="114" height="19" uuid="1b4822f2-0b06-4b9e-ac47-369eb933362c"/>
+				<textElement>
+					<font fontName="Arial" size="15" isBold="true" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="93" width="310" height="39" uuid="6fe3f4c9-dab3-4d3d-ba6c-8f1f8b088ba0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Reporte de Presupuestos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="102" splitType="Stretch">
+			<textField>
+				<reportElement x="192" y="13" width="266" height="20" uuid="370d0072-70c1-4778-ad24-0528591b615c"/>
+				<textElement>
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="53" width="266" height="20" uuid="8ae3de61-d553-4bc2-9b1a-14aac8a5ba73"/>
+				<textElement>
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-2" y="89" width="754" height="3" forecolor="#3399FF" uuid="43e4a15b-d2f0-456b-8ff3-069f500fe460"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="13" width="166" height="20" uuid="8bb4a851-9857-4dc3-af64-0a311c34cfba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre de la Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="53" width="183" height="20" uuid="032ae0fd-ca80-4bd6-bc59-eba140c8fc3d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección de la Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="625" y="33" width="129" height="20" uuid="3dc2087e-c8f0-4a20-9b78-06678fa5c9c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="458" y="33" width="166" height="20" uuid="37e311cb-0993-42c4-9abc-ab5355039ef8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Télefono de la Empresa]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="7" width="117" height="28" uuid="a98c6b87-8c66-4947-a822-cbbe6bd1e329"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Solicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="7" width="103" height="28" uuid="4a54799a-c927-44d0-9a81-0bec52e5f6c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="7" width="217" height="28" uuid="24bfd0ab-4f78-4894-bc7b-f4bd1e7c6e3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="7" width="113" height="28" uuid="23f39b2d-4df8-462b-8878-7f5e400a35a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha del Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="7" width="155" height="28" uuid="c9636388-5b68-413b-8e3c-562f7fe303f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Presupuesto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="92" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="9" width="117" height="20" uuid="9e2d455a-4420-4c8a-b036-89b87fa18dab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="581" y="9" width="155" height="20" uuid="af483659-32c7-4e94-b9e1-b13d6c6ffc86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="249" y="9" width="103" height="20" uuid="fcd7fddd-b88f-4aab-9b2f-6de8501d9f88"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="9" width="217" height="20" uuid="5ee04743-3258-49cf-94a1-df24d67b7981"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="43" width="754" height="3" forecolor="#3399FF" uuid="9cf3144a-a949-46bd-ba83-2fa7272e948c"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="128" y="9" width="110" height="20" uuid="1a00926c-ffc6-4442-bc78-8afc50a2379e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="53" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="752" height="54" uuid="8c7aa88a-0398-47d5-8716-1c60487df40c"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\FondoPieDePagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="192" y="0" width="36" height="38" uuid="5cd9b57a-9cc1-491d-a8a7-a54ac76be76c"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\IconoGorroChef.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="421" y="38" width="204" height="12" uuid="6399c9d9-b4d6-4400-b817-50fff6516691"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="10" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[No hay un amor más sincero que el amor a la comida]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

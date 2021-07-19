@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ruivaldez.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="594.0" fitWidth="1015.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/EscenaPrincipal.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresas" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="TipoEmpleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Platos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Entidades de Unión">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaServicioHasEmpleado" text="Servicios has Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicioHasPlato" text="Servicios has Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProductoHasPlato" text="Productos has Platos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="?">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

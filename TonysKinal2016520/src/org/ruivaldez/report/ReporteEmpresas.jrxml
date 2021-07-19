@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="94d581a0-9f67-48ab-9142-43707ee49693">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresa]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="79" uuid="695c35fd-078a-40d1-9f21-bcae15080abd"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\FondoAbstracto.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="181" y="0" width="67" height="46" uuid="d63dd190-fa3e-4d9e-989d-ed6f6de76cb4"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\IconoTiendaReporte.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="227" y="11" width="112" height="22" uuid="5a543b82-e316-46fd-a8e3-42d1f72c6eee"/>
+				<textElement>
+					<font fontName="Arial" size="15" isBold="true" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="141" y="0" width="264" height="24" uuid="c41609a2-609d-4193-949d-4dd2b8b57db5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Reporte de Presupuestos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="555" height="3" forecolor="#3399FF" uuid="1e2baa33-7101-4645-9cb4-cbf3f2af19ae"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="20" uuid="e21c9873-0719-4d9a-8149-18cae688cd4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Código Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="0" width="100" height="20" uuid="da1d04b3-debf-4ee8-addc-4df74e390e8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="1" width="100" height="20" uuid="81df5fc5-5f49-4a47-809e-862d0a69e272"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="1" width="100" height="20" uuid="40b2da42-20da-4a16-a9a0-42bcf44c2d01"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="22c7bcde-4fdc-4b66-8380-6c6947dd2174"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" forecolor="#66CCFF" uuid="f6e7d970-41ae-4e7f-96f4-e5bdaa238f4b"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="127" y="1" width="100" height="20" uuid="8b7c8876-46a9-46d5-890e-7b36de895ed8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="1" width="191" height="20" uuid="24567a78-d14e-453e-8dc8-0327f9edeff2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="1" width="100" height="20" uuid="c2538c1b-4f2c-43b0-a7b8-1831e922d775"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="3" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="274" y="33" width="204" height="12" uuid="a3a92ffe-f640-4233-8e89-ac4bc112f57d"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="10" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[No hay un amor más sincero que el amor a la comida]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="54" uuid="7d025b91-4e72-43a5-a1f3-493479ccd0d7"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\FondoPieDePagina.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="127" y="0" width="42" height="45" uuid="0aecfc24-4cf2-40cd-997b-29557a4c28ce"/>
+				<imageExpression><![CDATA["C:\\NetBeansProjects\\TonysKinal2016520\\src\\org\\ruivaldez\\image\\IconoGorroChef.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

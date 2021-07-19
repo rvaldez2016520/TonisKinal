@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="924.0" style="-fx-background-color: D6A958;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ruivaldez.controller.ProductoController">
+   <children>
+      <Label layoutX="380.0" layoutY="32.0" text="Productos">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="121.0" text="Código Producto">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoProducto" editable="false" layoutX="231.0" layoutY="114.0" prefHeight="44.0" prefWidth="538.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtNombreProducto" editable="false" layoutX="231.0" layoutY="186.0" prefHeight="44.0" prefWidth="538.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <TableView fx:id="tblProductos" layoutX="36.0" layoutY="327.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="270.0" prefWidth="849.0">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" prefWidth="165.0" text="Código Producto" />
+            <TableColumn fx:id="colNombreProducto" minWidth="6.0" prefWidth="509.0" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidad" minWidth="6.0" prefWidth="174.0" text="Cantidad" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="36.0" layoutY="625.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="35.0" layoutY="193.0" text="Nombre Producto">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEditar" layoutX="348.0" layoutY="625.0" mnemonicParsing="false" onAction="#editar" text="Editar">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="500.0" layoutY="625.0" mnemonicParsing="false" onAction="#generarReporte" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="181.0" layoutY="625.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="107.0" fitWidth="85.0" layoutX="800.0" layoutY="32.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoRegresar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="262.0" text="Cantidad">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCantidad" editable="false" layoutX="231.0" layoutY="255.0" prefHeight="44.0" prefWidth="538.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="726.0" prefWidth="1153.0" style="-fx-background-color: D6A958;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ruivaldez.controller.ServicioHasEmpleadoController">
+   <children>
+      <Label layoutX="364.0" layoutY="29.0" text="Servicios_has_Empleados">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="192.0" text="Servicios Código Servicio">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServiciosHasEmpleados" layoutX="38.0" layoutY="327.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="304.0" prefWidth="1078.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicioEmpleado" prefWidth="191.0" text="CódigoServicioEmpleado" />
+            <TableColumn fx:id="colCodigoServicio" minWidth="6.0" prefWidth="140.0" text="Código  Servicio" />
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="143.0" text="Código Empleado" />
+            <TableColumn fx:id="colFechaEvento" prefWidth="180.0" text="Fecha Evento" />
+            <TableColumn fx:id="colHoraEvento" minWidth="0.0" prefWidth="172.0" text="Hora Evento" />
+            <TableColumn fx:id="colLugarEvento" minWidth="0.0" prefWidth="251.0" text="Lugar Evento" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="36.0" layoutY="655.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="649.0" layoutY="192.0" text="Hora Evento">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="256.0" text="Empleados Código Empleado">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEditar" layoutX="350.0" layoutY="655.0" mnemonicParsing="false" onAction="#editar" text="Editar">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="502.0" layoutY="655.0" mnemonicParsing="false" onAction="#generarReporte" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="179.0" layoutY="655.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <GridPane fx:id="grpFechaEvento" layoutX="818.0" layoutY="121.0" prefHeight="44.0" prefWidth="264.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="645.0" layoutY="128.0" text="Fecha Evento">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraEvento" editable="false" layoutX="818.0" layoutY="185.0" prefHeight="44.0" prefWidth="264.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="645.0" layoutY="256.0" text="Lugar Evento">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLugarEvento" editable="false" layoutX="818.0" layoutY="249.0" prefHeight="44.0" prefWidth="264.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="93.0" fitWidth="109.0" layoutX="1023.0" layoutY="12.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <image>
+            <Image url="@../image/IconoRegresar.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoEmpleado" layoutX="322.0" layoutY="249.0" prefHeight="44.0" prefWidth="264.0" />
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="322.0" layoutY="185.0" prefHeight="44.0" prefWidth="264.0" />
+      <Label layoutX="52.0" layoutY="128.0" text="Código Servicio Empleado">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoServicioEmpleado" editable="false" layoutX="322.0" layoutY="121.0" prefHeight="44.0" prefWidth="264.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+</AnchorPane>

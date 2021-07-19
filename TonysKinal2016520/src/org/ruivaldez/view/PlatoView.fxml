@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1176.0" style="-fx-background-color: D6A958;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ruivaldez.controller.PlatoController">
+   <children>
+      <Label layoutX="529.0" layoutY="27.0" text="Platos">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="121.0" text="Código Plato">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoPlato" editable="false" layoutX="219.0" layoutY="114.0" prefHeight="44.0" prefWidth="316.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtCantidad" editable="false" layoutX="219.0" layoutY="186.0" prefHeight="44.0" prefWidth="316.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtNombrePlato" editable="false" layoutX="219.0" layoutY="256.0" prefHeight="44.0" prefWidth="316.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtDescripcionPlato" editable="false" layoutX="821.0" layoutY="114.0" prefHeight="44.0" prefWidth="316.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </TextField>
+      <TableView fx:id="tblPlatos" layoutX="36.0" layoutY="334.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="263.0" prefWidth="1101.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPlato" prefWidth="118.0" text="Código Plato" />
+            <TableColumn fx:id="colCantidad" minWidth="6.0" prefWidth="94.0" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="227.0" text="Nombre Plato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="325.0" text="Descripción Plato" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="169.0" text="Precio Plato" />
+            <TableColumn fx:id="colCodigoTipoPlato" prefWidth="167.0" text="CódigoTipoPlato" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="36.0" layoutY="625.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="40.0" layoutY="193.0" text="Cantidad">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="263.0" text="Nombre Plato">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="649.0" layoutY="121.0" text="Descripción Plato">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEditar" layoutX="348.0" layoutY="625.0" mnemonicParsing="false" onAction="#editar" text="Editar">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="500.0" layoutY="625.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="44.0" prefWidth="100.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="181.0" layoutY="625.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="672.0" layoutY="193.0" text="Precio Plato">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="647.0" layoutY="256.0" text="Código Tipo Plato">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrecioPlato" editable="false" layoutX="821.0" layoutY="186.0" prefHeight="44.0" prefWidth="316.0">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="821.0" layoutY="256.0" prefHeight="44.0" prefWidth="316.0" />
+      <ImageView fitHeight="107.0" fitWidth="85.0" layoutX="1052.0" layoutY="13.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <image>
+            <Image url="@../image/IconoRegresar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="95.0" layoutX="420.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/IconoPlato.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+</AnchorPane>

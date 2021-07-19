@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="606.0" prefWidth="726.0" style="-fx-background-color: D6A958;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ruivaldez.controller.ServicioHasPlatoController">
+   <children>
+      <Label layoutX="182.0" layoutY="35.0" text="Servicio_has_Platos">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="192.0" text="Código Plato">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblServiciosHasPlatos" layoutX="28.0" layoutY="271.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="304.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="309.0" text="CódigoServicioEmpleado" />
+            <TableColumn fx:id="colCodigoPlato" minWidth="6.0" prefWidth="320.0" text="Código  Servicio" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Label layoutX="38.0" layoutY="256.0">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaEvento" layoutX="818.0" layoutY="121.0" prefHeight="44.0" prefWidth="264.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ImageView fitHeight="93.0" fitWidth="109.0" layoutX="603.0" layoutY="28.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <image>
+            <Image url="@../image/IconoRegresar.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="211.0" layoutY="185.0" prefHeight="44.0" prefWidth="264.0" />
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="211.0" layoutY="121.0" prefHeight="44.0" prefWidth="264.0" />
+      <Label layoutX="52.0" layoutY="128.0" text="Código Servicio">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+</AnchorPane>
